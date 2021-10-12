@@ -27,7 +27,7 @@ def alert(url, params):
     r = requests.post(url, json=params, headers=headers)
     return r
 
-recipients = ["+265998006237", "+265991450316", "+265995246144", "+265999611280", "+265994427700", "+265992600883", "+265999679975"]
+recipients = ["+265998006237", "+265991450316", "+265995246144"]
 
 #* Get cluster details
 cluster = get_xi_data('http://10.44.0.52/sites/api/v1/get_single_cluster/5')
@@ -53,7 +53,7 @@ for site_id in cluster['site']:
             #os.system(backup_script)
             
             #* ship data to remote site
-            push_core = "rsync " + "-r $WORKSPACE/BHT-Core " + site['username'] + "@" + site['ip_address'] + ":/var/www"
+            push_core = "rsync " + "-r $WORKSPACE/BHT-Core " + site['username'] + "@" + site['ip_address'] + ":/var/www/html"
             os.system(push_core)
 
             # send sms alert
