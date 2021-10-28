@@ -28,7 +28,7 @@ def alert(url, params):
     r = requests.post(url, json=params, headers=headers)
     return r
 
-recipients = ["+265998006237", "+265991312980", "+265995246144", "+265995628519", "+265999959499","+265995316633"]
+recipients = ["+265998006237", "+265991312980", "+265995246144", "+265995628519", "+265999959499","+265995316633","+265881262319"]
 
 cluster = get_xi_data('http://10.44.0.52/sites/api/v1/get_single_cluster/1')
 
