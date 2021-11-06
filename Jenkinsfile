@@ -80,8 +80,8 @@ echo "Your build number is: \\${REQUEST_ID} -> ${REQUEST_ID}"'''
         stage('Core & ART') {
           steps {
             echo 'Shipping & configuring Core & ART'
-            sh '''#python3 core_shippingx.py
-#python3 art_shippingx.py'''
+            sh '''python3 core_shippingx.py
+python3 art_shippingx.py'''
           }
         }
 
